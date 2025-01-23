@@ -1,46 +1,112 @@
-# Getting Started with Create React App
+# Task Manager UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend application for the Task Manager website. It allows users to create, edit, delete, and mark tasks as complete. Users can also sort tasks and interact with an API for data management. The application is built using modern web technologies, including React, Tailwind CSS, TypeScript, and Axios.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add, Edit, and Delete Tasks**: Users can manage their tasks effortlessly.
+- **Mark Tasks as Complete**: A checkbox feature lets users mark tasks as done.
+- **Sort Tasks**: Sort tasks based on priority or due date.
+- **Authentication**: Secure login and logout functionality.
+- **API Integration**: Communicates with the backend for data persistence.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React**: For building the user interface.
+- **Tailwind CSS**: For styling the components.
+- **TypeScript**: For type safety and better code maintenance.
+- **Axios**: For making API requests.
+- **Firebase**: Used for deployment and hosting.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+Task-Management-UI/
+├── src/
+│   ├── components/
+│   │   ├── Tasks/
+│   │   │   ├── NavigationBar.tsx
+│   │   │   ├── PrivateRoute.tsx
+│   │   ├── context/
+│   ├── services/
+│   │   ├── api.ts
+│   ├── types/
+│   ├── App.tsx
+│   ├── index.css
+│   ├── index.tsx
+│   ├── logo.svg
+├── .firebaserc
+├── .gitignore
+├── firebase.json
+├── package-lock.json
+├── package.json
+├── README.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org/) installed on your machine.
+- A Firebase account for deployment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mnallamada/task-management-ui.git
+   cd task-management-ui
+   ```
 
-### `npm run eject`
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Create a `.env` file in the root directory and add the necessary environment variables:
+   ```env
+   REACT_APP_API_URL=https://taskmanager-api.mounikanallamada.com
+   REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+   REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. Open your browser and navigate to `http://localhost:3000`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Deployment
 
-## Learn More
+This project uses Firebase for deployment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Log in to Firebase:
+   ```bash
+   firebase login
+   ```
+
+3. Deploy to Firebase:
+   ```bash
+   firebase deploy
+   ```
+
+## Contributing
+
+Feel free to contribute by submitting issues or pull requests. For major changes, please discuss them in an issue first.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+**Author**: Mounika Nallamada
